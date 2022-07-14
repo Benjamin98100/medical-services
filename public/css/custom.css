@@ -90,3 +90,28 @@
 .navbar-light .navbar-nav .nav-link {
     color: rgba(245, 245, 245, 0.932);
 }
+
+.navbar-light .navbar-brand {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color:#65b4e9;
+}
+
+.bs-linkis{
+    background-color: #65b4e9;
+    width:300px;
+    text-align: center;
+    color: #ecf1f5;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 10px auto;
+}
+.bs-linkis:hover{
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+    color: #f5ecf1;
+    transition: all 0.8s;
+    
+}   
+

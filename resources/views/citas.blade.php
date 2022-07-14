@@ -36,21 +36,25 @@
             <p class="lead mb-4">Evita hacer filas por largas horas de espera y aprobecha de una forma mas eficiente tu tiempo tramitando tu cita desde esta plataforma, registrate o inicia sesion para llenar el formulario de agendar para tu cita</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             @if (Route::has('login'))
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                @auth
-                <div>
-                 <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                </div>
-                    
-                @else
-                    <a href="{{ route('login') }}" class="alog ">Inicia sesion</a>
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                    <div>
+                        @if(Auth()->user()->roll=='admin')  
+                            <a href="{{ url('/home') }}" class="nav-link bs-linkis">Ver citas</a>
+                        @else
+                            <a href="{{ url('/home') }}" class="nav-link bs-linkis">Tramitar cita</a>
+                        @endif
+                    </div>
+                        
+                    @else
+                        <a href="{{ route('login') }}" class="alog ">Inicia sesion</a>
 
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="alog ">Registrate</a>
-                @endif
-                @endauth
-            </div>
-        @endif
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="alog ">Registrate</a>
+                    @endif
+                    @endauth
+                </div>
+            @endif
             </div>
         </div>
     </div>

@@ -23,6 +23,7 @@ Route::get('Citas',[CitasController::class,'index'])->name('citas.index');
 Route::get('admin',[adminController::class,'index'])
     ->middleware('auth.admin')
     ->name('admin.auth');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
