@@ -69,13 +69,13 @@
         </section>
         <section class="portfolio-block call-to-action border-bottom">
             <div class="container">
-                <div class="d-flex justify-content-center align-items-center content">
+                <div class="d-flex justify-content-center align-items-center content ">
                     <h3>Te gusta lo que vez?</h3><button class="btn btn-outline-primary btn-lg" type="button">Conocenos</button>
                 </div>
             </div>
         </section>
-        <section class="portfolio-block skills">
-            <div class="container">
+        <section class="portfolio-block skills bg-bsr">
+            <div class="container ">
                 <div class="heading">
                     <h2>Somos una empresa comprometida con el apoyo a los pacientes</h2>
                 </div>
@@ -112,8 +112,9 @@
         </section>
     </main>
     
-    <div>
-        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+    <div class="bs-flx ">
+
+        <div id="carouselExampleControlsNoTouching" class="carousel slide w-50 m-5" data-bs-touch="false" data-bs-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                 <img src="assets/img/md1.jpg" class="d-block w-100" alt="...">
@@ -133,6 +134,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+        </div>
+        <div class="cartel">
+            <img src="https://github.com/drixter1/imagenes/blob/main/logosolo.png?raw=true" alt="logo">
         </div>
     </div>
 

@@ -115,3 +115,23 @@
     
 }   
 
+.bs-flx{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.cartel{
+    width: 50%;
+}
+.bg-bsr{
+    background-color: #6a5ccfa9;
+    padding: 10px;
+}
+.cartel img{
+    display: block;
+    margin: 0px auto;
+    max-width: 50%;
+}
+
+
+
