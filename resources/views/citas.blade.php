@@ -22,6 +22,23 @@
                     <li class="nav-item"><a class="nav-link active" href="{{route('main.index')}}">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="{{route('citas.index')}}">Citas</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Conócenos</a></li>
+                    <li class="nav-item">
+						@if (Auth::check())
+							
+							<a style="color: rgb(230, 24, 24)" class="nav-link" href="{{ route('logout') }}"
+								onclick="event.preventDefault();
+												document.getElementById('logout-form').submit();">
+									{{ __('Cerrar Sesion') }}
+							</a>
+
+							<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+								@csrf
+							</form>
+	
+						@else
+							<a class="nav-link " aria-current="page" href="login">Iniciar sesion</a>	
+						@endif
+					</li>
                 </ul>
             </div>
         </div>
@@ -40,9 +57,9 @@
                     @auth
                     <div>
                         @if(Auth()->user()->roll=='admin')  
-                            <a href="{{ url('/home') }}" class="nav-link bs-linkis">Ver citas</a>
+                            <a href="{{ url('/home') }}" class="nav-link bs-linkis">Ver tareas de administrador</a>
                         @else
-                            <a href="{{ url('/home') }}" class="nav-link bs-linkis">Tramitar cita</a>
+                            <a href="{{ url('/home') }}" class="nav-link bs-linkis">Mi perfil</a>
                         @endif
                     </div>
                         

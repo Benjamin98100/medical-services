@@ -15,13 +15,30 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
         <div class="container"><a class="navbar-brand logo" href="#">Citas Medicas</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="{{route('main.index')}}">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="{{route('citas.index')}}">Citas</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">Conócenos</a></li>
+                    <li class="nav-item">
+						@if (Auth::check())
+							
+							<a style="color: rgb(230, 24, 24)" class="nav-link" href="{{ route('logout') }}"
+								onclick="event.preventDefault();
+												document.getElementById('logout-form').submit();">
+									{{ __('Cerrar Sesion') }}
+							</a>
+
+							<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+								@csrf
+							</form>
+	
+						@else
+							<a class="nav-link " aria-current="page" href="login">Iniciar sesion</a>	
+						@endif
+					</li>
                 </ul>
             </div>
         </div>
