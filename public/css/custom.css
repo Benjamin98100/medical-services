@@ -1,0 +1,92 @@
+.slide{
+    width: 100%;
+    margin: auto;
+}
+
+.slide img{
+    width: 100%;
+    height: 300px;
+}
+.portfolio-block{
+ padding: 20px;
+}
+.hero{
+    margin: 0px 0px;
+    width: 100%;
+    background-image: url(https://github.com/drixter1/imagenes/blob/main/hero-desktop.jpg?raw=true);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.hero h1{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    display: flex;
+   
+    justify-content: center;
+}
+
+.page-footer{
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+    margin-top: 10px;
+}
+
+
+/*@media screen and (min-width: 780px) and (max-width: 1024px){
+    .hero{
+        background-image: url(../assets/img/hero-desktop.jpg);
+    }
+}*/
+@media screen and (min-width: 481px) and (max-width: 1024px){
+    .hero{
+        background-image: url(https://github.com/drixter1/imagenes/blob/main/hero-desktop.jpg?raw=true);
+    }
+}
+@media screen and (max-width: 480px){
+    .hero{
+        background-image: url(https://github.com/drixter1/imagenes/blob/main/hero-mov.jpg?raw=true);
+        height: 200px;
+    }
+}
+.page-footer a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.page-footer a:hover{
+    color: rgb(50, 69, 87);
+}
+
+.page-footer p{
+    color: antiquewhite;
+}
+
+.alog{
+    color: rgb(232, 232, 236);
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+}
+
+.alog:hover{
+   color: aliceblue;
+   background: linear-gradient(120deg, #00f7cd, #0ea0ff);
+}
+
+.bg-b{
+    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+    color: antiquewhite;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(245, 245, 245, 0.932);
+}
