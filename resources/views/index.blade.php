@@ -77,7 +77,7 @@
         <section class="portfolio-block skills bg-bsr">
             <div class="container ">
                 <div class="heading">
-                    <h2>Somos una empresa comprometida con el apoyo a los pacientes</h2>
+                    <h2 class="lld">Somos una empresa comprometida con el apoyo a los pacientes</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
@@ -103,7 +103,7 @@
                             <div class="card-header bg-transparent border-0"><i class="icon ion-ios-gear-outline"></i></div>
                             <div class="card-body">
                                 <h3 class="card-title">Quienes somos?</h3>
-                                <p class="card-text">Una empresa destinada al apoyo de médicos y pacientes con sus citas medicas  y poder crearlas de manera mas practica.</p>
+                                <p class="card-text">Una empresa destinada al apoyo de médicos y pacientes con sus citas medicas </p>
                             </div>
                         </div>
                     </div>

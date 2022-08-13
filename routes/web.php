@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\CitasController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\verCitasController;
+use App\Http\Controllers\AgendarController;
 
 
 
@@ -27,3 +29,10 @@ Route::get('admin',[adminController::class,'index'])
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('tramitar',[AgendarController::class,'index'])->name('agendar.index');
+Route::get('tramitar/create',[AgendarController::class,'create'])->name('agendar.create');
+Route::post('tramitar/cita',[AgendarController::class,'store'])->name('agendar.store');
+
+
+Route::get('vercitas',[verCitasController::class,'index'])->name('ver_citas.index');
