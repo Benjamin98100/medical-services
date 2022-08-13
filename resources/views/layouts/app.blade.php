@@ -24,6 +24,40 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+
+    <script type="text/javascript">
+
+        function callbackThen(response){
+
+        // read HTTP status
+
+        console.log(response.status);
+
+        // read Promise object
+
+        response.json().then(function(data){
+
+        console.log(data);
+
+        });
+
+        }
+
+        function callbackCatch(error){
+
+        console.error('Error:', error)
+
+        }
+
+        </script>
+
+        {!! htmlScriptTagJsApi([
+
+        'callback_then' => 'callbackThen',
+
+        'callback_catch' => 'callbackCatch'
+
+        ]) !!}
 </head>
 <body>
     <div id="app">
