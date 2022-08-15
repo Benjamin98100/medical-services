@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Agendar;
 
-class verCitasController extends Controller
+class VerCitasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class verCitasController extends Controller
      */
     public function index()
     {
-        return view('citas.index');
+        $citas = Agendar::orderBy('id','desc')->paginate();
+        return view('agenda.index', compact('citas'));
     }
 
     /**

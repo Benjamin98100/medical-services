@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Agendar;
 use Carbon\Carbon;
+use App\Http\Controllers\storeAgendar;
 
 class AgendarController extends Controller
 {
@@ -15,6 +16,7 @@ class AgendarController extends Controller
      */
     public function index()
     {
+        
         return view('tramita.index');
     }
 
@@ -34,9 +36,15 @@ class AgendarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        
+    public function store(Request $request){
+        $request -> validate([
+            'nombre' => 'required|max:60',
+            'apellido_p' => 'required|max:60',
+            'apellido_m' => 'required|max:60',
+            'telefono' => 'required|min:10|integer',
+            'solicitud_fecha' => 'required|date'
+        ]);
+
 
         $cita = new Agendar();
         $cita -> nombre = $request -> nombre;
@@ -45,9 +53,7 @@ class AgendarController extends Controller
         $cita -> telefono = $request ->telefono;
         $cita -> solicitud_fecha = $request -> solicitud_fecha;
         $cita -> save();
-        return redirect()->route('home');
-
-
+        return redirect()->route('ver_citas.index');
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\CitasController;
 use App\Http\Controllers\adminController;
-use App\Http\Controllers\verCitasController;
+use App\Http\Controllers\VerCitasController;
 use App\Http\Controllers\AgendarController;
 
 
@@ -35,4 +35,4 @@ Route::get('tramitar/create',[AgendarController::class,'create'])->name('agendar
 Route::post('tramitar/cita',[AgendarController::class,'store'])->name('agendar.store');
 
 
-Route::get('vercitas',[verCitasController::class,'index'])->name('ver_citas.index');
+Route::get('vercitas',[VerCitasController::class,'index'])->name('ver_citas.index');
